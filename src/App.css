@@ -7,13 +7,13 @@
   /**
    * colors
    */
-  --blue-1: #0D1831;
-  --blue-2: #97C5E8;
-  --blue-3: #D5EAFE;
-  --blue-4: #F0F8FD;
-  --grey: #4F4F4F;
-  --grey-3: #eeeeee;
-  --grey-2: #4F4F4F;
+  --blue-1: #2C52ED;
+  --blue-2: #E3F2FD;
+  --blue-3: #AAB8F9;
+  --blue-4: #5372F0;
+  --grey-1: #6C757D;
+  --grey-2: #bfbfbf;
+  --grey-3: #5f666d;
   --black: #000000;
   --white: #FFFFFF;
   --white-1: #FEFEFE;
@@ -78,5 +78,6 @@ button {
 }
 
 body {
-  font-family: var(--ff-1)
+  font-family: var(--ff-1);
+  background-color: var(--blue-2)
 }
