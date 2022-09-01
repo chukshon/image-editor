@@ -15,6 +15,7 @@ import {
   UploadInputStyled,
   ResetButton,
   FilterInput,
+  SaveButton,
 } from './style'
 import { FiRotateCcw, FiRotateCw } from 'react-icons/fi'
 import { BiVerticalCenter, BiHorizontalCenter } from 'react-icons/bi'
@@ -230,7 +231,9 @@ function App() {
         </EditingPanel>
         <ActionBtns>
           <div className='group_one'>
-            <ResetButton onClick={resetFilters}>RESET FILTERS</ResetButton>
+            <ResetButton activeStatus={image} onClick={resetFilters}>
+              RESET FILTERS
+            </ResetButton>
           </div>
           <div className='group_two'>
             <UploadInputStyled htmlFor='image'>
@@ -244,12 +247,26 @@ function App() {
                 onChange={handleImageUpload}
               />
             </UploadInputStyled>
-            <Button activeStatus={image} onClick={saveImage} isActive={true}>
+            <SaveButton onClick={saveImage} activeStatus={image}>
               SAVE IMAGE
-            </Button>
+            </SaveButton>
           </div>
         </ActionBtns>
       </ContainerStyled>
+      <p style={{ marginTop: '20px' }}>
+        Developed by&nbsp;
+        <span>
+          <a
+            href='https://chukhondev.netlify.app'
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ color: 'red' }}
+          >
+            ChuksHon
+          </a>
+        </span>
+        &nbsp;with love.<span className='beat'>❤️</span>
+      </p>
     </Wrapper>
   )
 }

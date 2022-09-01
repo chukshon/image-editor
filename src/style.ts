@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 15px 10px;
   height: max-content;
   @media (min-width: 766px) {
@@ -176,19 +177,37 @@ export const UploadInputStyled = styled.label`
     background-color: var(--grey-1);
   }
 `
-export const ResetButton = styled.button`
+export const ResetButton = styled.button<InactiveProps>`
+  opacity: ${(props) => (!props.activeStatus ? '0.5' : '1')};
+  pointer-events: ${(props) => (!props.activeStatus ? 'none' : '')};
   background-color: none;
   border: 1px solid var(--grey-2);
   width: 100%;
   padding: 10px;
   border-radius: var(--radius-5);
-  color: var(--grey-3);
+  color: var(--grey-1);
   text-align: center;
   font-size: 0.9rem;
   cursor: pointer;
   &:hover {
     border: 1px solid transparent;
     background-color: var(--grey-3);
+    color: var(--white);
+  }
+`
+export const SaveButton = styled.button<InactiveProps>`
+  opacity: ${(props) => (!props.activeStatus ? '0.5' : '1')};
+  pointer-events: ${(props) => (!props.activeStatus ? 'none' : '')};
+  background-color: var(--blue-4);
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius-5);
+  color: var(--white);
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--blue-1);
     color: var(--white);
   }
 `
