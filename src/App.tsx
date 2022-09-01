@@ -137,7 +137,7 @@ function App() {
       canvas.height
     )
     const link = document.createElement('a')
-    link.download = 'image.jpg'
+    link.download = `${imageFile.name}.jpg`
     link.href = canvas.toDataURL()
     link.click()
   }

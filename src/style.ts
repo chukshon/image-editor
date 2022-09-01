@@ -59,10 +59,11 @@ export const ImageEditor = styled.div<FilterProps>`
   justify-content: center;
   overflow: hidden;
   img {
-    max-width: 500px;
-    max-height: 300px;
+    max-width: 490px;
+    max-height: 335px;
     width: 100%;
     height: 100%;
+    object-fit: contain;
     transform: rotate(${(props) => props.rotate}deg)
       scaleX(${(props) => props.flipHorizontal})
       scaleY(${(props) => props.flipVertical});
@@ -84,6 +85,7 @@ export const FilterPanel = styled.div<InactiveProps>`
   border: 1px solid var(--grey-2);
   margin-top: 20px;
   border-radius: var(--radius-5);
+  height: 100%;
   @media (min-width: 766px) {
     width: 35%;
   }
@@ -91,7 +93,7 @@ export const FilterPanel = styled.div<InactiveProps>`
 
 export const FilterInput = styled.input`
   width: 100%;
-  height: 5px;
+  height: 40px;
   accent-color: #5372f0;
 `
 
